@@ -16,3 +16,11 @@
 2. Write a function called tally that accepts a List of Strings representing votes and returns one string to show what got the most votes.
 3. Write a method that reads a JavaScript file with a given Path, and generates an error message whenever it finds a line that doesn’t end in a semi-colon.
 4. Run tests for all methods .
+
+## lab06 /1-08
+1. create class restaurant
+2. create class review
+3. create function addRes for add new restaurant
+4. create function gitReviewWithName for git review wit name
+5. create function addReviewFun for new review
+6. add test for all class and method
