@@ -5,6 +5,8 @@ public class Review {
     String author;
     int numStarts;
     String nameOfRestaurant;
+    String ReviewResult;
+
     public  Review (String bodies,String authors,int stars){
         this.body=bodies;
         this.author=authors.toUpperCase();
@@ -28,7 +30,8 @@ public class Review {
             this.numStarts=stars;
         }
         this.nameOfRestaurant=name.toUpperCase();
-        System.out.println(name+" Restaurant, "+body+", my Review is: "+numStarts+", this review from: "+author);
+        this.ReviewResult=name+" Restaurant, "+body+", my Review is: "+numStarts+", this review from: "+author;
+//        System.out.println(name+" Restaurant, "+body+", my Review is: "+numStarts+", this review from: "+author);
     }
 
 public  String test(){

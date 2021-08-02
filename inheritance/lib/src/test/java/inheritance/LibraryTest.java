@@ -11,26 +11,43 @@ public class LibraryTest {
         Library classUnderTest = new Library();
         assertTrue("someLibraryMethod should return 'true'", classUnderTest.someLibraryMethod());
     }
-    @Test public void restaurantClass(){
-//        Restaurant test=new Restaurant();
-        String result="Restaurant{name='AHMAD', numberStar=5, priceGatogory=$1-$10 per person}";
-        assertEquals("this for restaurant class: ",result,String.valueOf(Library.addRes("ahmad",6,9)));
-    }
-    @Test public void reviewClase(){
-        Review review=new Review("fast","Ahmad",5);
-        String result="this review from: AHMAD";
-        assertEquals("this for review class: ",result,review.test());
+    //////////////lab6 start////////////
+//    @Test public void restaurantClass(){
+////        Restaurant test=new Restaurant();
+//        String result="Restaurant{name='AHMAD', numberStar=5, priceGatogory=$1-$10 per person}";
+//        assertEquals("this for restaurant class: ",result,String.valueOf(Library.addRes("ahmad",6,9)));
+//    }
+//    @Test public void reviewClase(){
+//        Review review=new Review("fast","Ahmad",5);
+//        String result="this review from: AHMAD";
+//        assertEquals("this for review class: ",result,review.test());
+//
+//    }
+//    @Test public void reviewWithName(){
+//        String result="Review{body='Fast Delivery', author='AHMAD', numStarts=5, nameOfRestaurant='LOLO'}";
+//        assertEquals("this for review with name: ",result,String.valueOf(Library.gitReviewWithName("lolo","Fast Delivery","ahmad",5,80)));
+//    }
+//    @Test public void AddReview(){
+//        Restaurant restaurant=new Restaurant("alia",5,50);
+//        restaurant.addReview("Slowly Delaviry","ali",1);
+//        String result="Test add review restaurant: this is old star: 5, and this new star after review: 1";
+//        assertEquals("this for add review: ",result,restaurant.addReviewTest());
+//
+//    }
+    //////////////lab6 end////////////
 
-    }
-    @Test public void reviewWithName(){
-        String result="Review{body='Fast Delivery', author='AHMAD', numStarts=5, nameOfRestaurant='LOLO'}";
-        assertEquals("this for review with name: ",result,String.valueOf(Library.gitReviewWithName("lolo","Fast Delivery","ahmad",5,80)));
+    //////////////lab7 start////////////
+@Test public void shopClass(){
+
+        String result="Shop{name='LOLO', description='shoes', priceGatogory='$21-$30 per person'}";
+        assertEquals("this for shop class: ",result,String.valueOf(Library.addShop("lolo","shoes",24)));
     }
     @Test public void AddReview(){
-        Restaurant restaurant=new Restaurant("alia",5,50);
-        restaurant.addReview("Slowly Delaviry","ali",1);
-        String result="Test add review: this is old star: 5, and this new star after review: 1";
-        assertEquals("this for add review: ",result,restaurant.addReviewTest());
+        Shop test=new Shop("lolo","shoes",24);
+        test.addReview("Slowly Delaviry","ali",1);
+        String result="Test add review for shop: this is old star: 0, and this new star after review: 1";
+        assertEquals("this for add review Shop: ",result,test.addReviewTest());
 
     }
+    //////////////lab7 end////////////
 }

@@ -7,13 +7,14 @@ public class Library {
     public boolean someLibraryMethod() {
         return true;
     }
-
+    //////////////lab6 start////////////
     public static Restaurant addRes(String name, int star, int price){
         Restaurant restaurant= new Restaurant(name,star,price);
         restaurant.test();
         System.out.println(restaurant);
         return restaurant;
     }
+
     public static Review gitReviewWithName(String name, String bodies, String authors, int stars, int price){
         Restaurant restaurant= new Restaurant(name,stars,price);
         String names=restaurant.getName();
@@ -23,11 +24,36 @@ public class Library {
     public static void addReviewFun(String name, int star, int price){
         Restaurant restaurant= new Restaurant(name,star,price);
         restaurant.addReview("Slowly Delaviry","ali",1);
-
+        restaurant.addReview("Slowly Delaviry","ali",3);
+        restaurant.getReview();
     }
+    //////////////lab6 end////////////
+
+    //////////////lab7 start////////////
+    public static Shop addShop(String name, String descriptions, int price){
+        Shop shop=new Shop(name,descriptions,price);
+        shop.test();
+        System.out.println(shop);
+        return shop;
+    }
+    public static void addReviewShop(String name, String descriptions, int price){
+        Shop shop=new Shop(name,descriptions,price);
+        shop.addReview("good seal","ali",1);
+        shop.addReview("Slowly Delaviry","ali",3);
+        shop.getReview();
+    }
+    //////////////lab7 end////////////
     public static void main(String[] args) {
-        addRes("ahmad",7,7);
-        gitReviewWithName("lolo","Fast Delivery","ahmad",5,80);
-        addReviewFun("KFC",5,25);
+        //////////////lab6 start////////////
+//        addRes("ahmad",7,7);
+//        gitReviewWithName("lolo","Fast Delivery","ahmad",5,80);
+//        addReviewFun("KFC",5,25);
+//////////////lab6 end////////////
+
+        //////////////lab7 start////////////
+        addShop("lolo","shoes",30);
+        addReviewShop("lolo","shoes",30);
+//////////////lab7 end////////////
+
     }
 }

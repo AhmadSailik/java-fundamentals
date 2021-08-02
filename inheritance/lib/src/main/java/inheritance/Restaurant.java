@@ -1,5 +1,7 @@
 package inheritance;
 
+import java.util.ArrayList;
+
 public class Restaurant {
 
 
@@ -7,7 +9,9 @@ public class Restaurant {
     private String name;
     private int numberStar;
     private String priceGatogory;
-    int oldStart;
+    private int oldStar;
+    ArrayList<Integer>starAvg;
+    ArrayList<String>allReview;
 
     public String getName() {
         return name;
@@ -31,27 +35,43 @@ public class Restaurant {
         }else if(price>=31){
             this.priceGatogory="$31+ per person";
         }
-
+        starAvg=new ArrayList<Integer>();
+        allReview=new ArrayList<String>();
     }
 
     public void addReview(String bodies, String authors, int stars){
-        this.oldStart=this.numberStar;
         if(stars>=5){
-            this.numberStar=5;
+            stars=5;
         }else if(stars<=0){
-            this.numberStar=0;
-        }else {
-            this.numberStar=stars;
+            stars=0;
         }
-        Review review=new Review(this.name,bodies,authors,stars);
+
+//        ArrayList<Integer>this.name=new ArrayList<Integer>();
+        this.oldStar=this.numberStar;
+        starAvg.add(stars);
+        int sum=0;
+        for (int i = 0; i < starAvg.size(); i++) {
+            sum+=starAvg.get(i);
+        }
+        this.numberStar=sum/starAvg.size();
+
+        Review review=new Review(this.name,bodies,authors,this.numberStar);
+//        System.out.println(review.ReviewResult);
+        allReview.add(review.ReviewResult);
         System.out.println(addReviewTest());
+    }
+    public void getReview(){
+        System.out.println("this Review for: "+this.name+" restaurant........");
+        for (int i = 0; i < this.allReview.size(); i++) {
+            System.out.println(this.allReview.get(i));
+        }
     }
 
     public void test(){
         System.out.println("this is form restaurant: "+name);
     }
    public String addReviewTest(){
-       return "Test add review: this is old star: "+oldStart+", and this new star after review: "+numberStar;
+       return "Test add review restaurant: this is old star: "+oldStar+", and this new star after review: "+numberStar;
    }
 
     @Override
