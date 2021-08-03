@@ -42,17 +42,37 @@ public class Library {
         shop.addReview("Slowly Delaviry","ali",3);
         shop.getReview();
     }
+    public static void addMovie(){
+        Theater theater=new Theater();
+        theater.addMovie("ahmad");
+        theater.addMovie("bob");
+        theater.addMovie("eeee");
+        theater.removeMovie("pig");
+        theater.addReview("ahmad","it's very good","ali",4);
+        theater.addReview("rrrr","it's good","ali",4);
+        theater.addReview("ahmad","it's bad","noor",0);
+        theater.addReview("ahmad","it's good","vicy",3);
+
+          theater.getReview();
+          theater.getMovie();
+
+
+
+
+    }
     //////////////lab7 end////////////
     public static void main(String[] args) {
         //////////////lab6 start////////////
-//        addRes("ahmad",7,7);
-//        gitReviewWithName("lolo","Fast Delivery","ahmad",5,80);
-//        addReviewFun("KFC",5,25);
+        addRes("ahmad",7,7);
+        gitReviewWithName("lolo","Fast Delivery","ahmad",5,80);
+        addReviewFun("KFC",5,25);
 //////////////lab6 end////////////
 
         //////////////lab7 start////////////
         addShop("lolo","shoes",30);
         addReviewShop("lolo","shoes",30);
+        addMovie();
+
 //////////////lab7 end////////////
 
     }

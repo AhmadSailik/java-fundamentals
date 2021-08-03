@@ -42,12 +42,26 @@ public class LibraryTest {
         String result="Shop{name='LOLO', description='shoes', priceGatogory='$21-$30 per person'}";
         assertEquals("this for shop class: ",result,String.valueOf(Library.addShop("lolo","shoes",24)));
     }
-    @Test public void AddReview(){
-        Shop test=new Shop("lolo","shoes",24);
-        test.addReview("Slowly Delaviry","ali",1);
-        String result="Test add review for shop: this is old star: 0, and this new star after review: 1";
-        assertEquals("this for add review Shop: ",result,test.addReviewTest());
+//    @Test public void AddReview(){
+//        Shop test=new Shop("lolo","shoes",24);
+//        test.addReview("Slowly Delaviry","ali",1);
+//        String result="Test add review for shop: this is old star: 0, and this new star after review: 1";
+//        assertEquals("this for add review Shop: ",result,test.addReviewTest());
+//
+//    }
+    @Test public void movie(){
+        Theater theater=new Theater();
+        theater.addMovie("ahmad");
+        String result="[JOE ORIGINS, DEAD PIGS, BLACK WIDOW, A NEW LEGACY, AHMAD, PIG]";
+        assertEquals("this for add move: ",result,String.valueOf(theater.Movie));
 
+        theater.removeMovie("pig");
+        String result2="[JOE ORIGINS, DEAD PIGS, BLACK WIDOW, A NEW LEGACY, AHMAD]";
+        assertEquals("this for remove move: ",result2,String.valueOf(theater.Movie));
+
+        theater.addReview("ahmad","it's very good","ali",4);
+        String result3="Test add review for AHMAD movie: this is old star: 0, and this new star after review: 4";
+        assertEquals("this for review move: ",result3,String.valueOf(theater.addReviewTest()));
     }
     //////////////lab7 end////////////
 }

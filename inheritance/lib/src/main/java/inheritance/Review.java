@@ -30,7 +30,7 @@ public class Review {
             this.numStarts=stars;
         }
         this.nameOfRestaurant=name.toUpperCase();
-        this.ReviewResult=name+" Restaurant, "+body+", my Review is: "+numStarts+", this review from: "+author;
+        this.ReviewResult=name.toUpperCase()+", "+body+", my Review is: "+numStarts+", this review from: "+author;
 //        System.out.println(name+" Restaurant, "+body+", my Review is: "+numStarts+", this review from: "+author);
     }
 
